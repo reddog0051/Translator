@@ -3,22 +3,59 @@
     api-level="23"
     density="xxhdpi"
     format="1"
-    timestamp="1453750609485" >
+    timestamp="1453753810976" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="404" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="379" />
     <task
         name="verifier"
-        duration="0" />
+        duration="164" />
 
-    <build timestamp="1453749289719" >
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\dependencies_2ed5d2c9a11958112761d1d841581f7fa09e05b1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_0_d02d55fb8bf069da7d4f0ddac3be42f409d5cf0c.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_1_1cf5d6c7956b71ac652d0390c07eadccf5323777.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_2_802ddd016863d8d8add3b30799f0d1bd0c3209c8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_3_333379b2dceaec07663a3d82b507748e496575a6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_4_75e49020e18fdfdd490d77eeb3db35f53057ffdb.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_5_8f732d97fb781d285f692f2eb5fb1834ebfb7347.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_6_fd4ab7a158c7aa8dc08580a468c5b05f4ee237b8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_7_6c71b2e9aaaea77de7354b1876b74e93bea41d3a.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_8_38d7dd4fb68998238e9bc04b175596d042e3f68c.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_9_f197637a5162ce99e894aa0b50ecb54d2a4d969c.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="1453753810976" >
         <artifact
             location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\dependencies_2ed5d2c9a11958112761d1d841581f7fa09e05b1.apk"
             type="SPLIT" />
@@ -56,11 +93,5 @@
             location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1453749828711" >
-        <artifact
-            location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_5_8f732d97fb781d285f692f2eb5fb1834ebfb7347.apk"
-            type="SPLIT" />
-    </build>
-    <build timestamp="1453750609485" />
 
 </instant-run>

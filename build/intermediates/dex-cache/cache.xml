@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ca335924292e1693b15c10c85bed2ea3ae963068">
+        <dex dex="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_2ed5d2c9a11958112761d1d841581f7fa09e05b1\classes.dex" />
+    </item>
+
+</items>

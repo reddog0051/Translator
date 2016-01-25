@@ -28,7 +28,7 @@ public class ExpandableTranslatorAdapter extends ExpandableRecyclerAdapter<Trans
      *                       displayed in the RecyclerView that this
      *                       adapter is linked to
      */
-    public ExpandableTranslatorAdapter(Context context, @NonNull List<? extends ParentListItem> parentItemList) {
+    public ExpandableTranslatorAdapter(Context context, @NonNull List<ParentListItem> parentItemList) {
         super(parentItemList);
         mInflater = LayoutInflater.from(context);
     }

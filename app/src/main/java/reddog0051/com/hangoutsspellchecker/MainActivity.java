@@ -16,15 +16,11 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.bignerdranch.expandablerecyclerview.Adapter.ExpandableRecyclerAdapter;
-import com.bignerdranch.expandablerecyclerview.ViewHolder.ChildViewHolder;
-import com.bignerdranch.expandablerecyclerview.ViewHolder.ParentViewHolder;
+import com.bignerdranch.expandablerecyclerview.Model.ParentListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mTranslatedTextView;
     private ExpandableTranslatorAdapter mAdapter;
     private NotificationReceiver mNotificationReceiver;
-    private List<TranslatedItem> mTranslatedItems = new ArrayList<TranslatedItem>();
+    private List<ParentListItem> mTranslatedItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,10 +138,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // Listen for notifications from NotificationListener
     private class NotificationReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent != null) {
+                // Get a list of notifications from NotificationListener
+                // usually onResume
                 if (intent.getStringExtra("command").equals("list")) {
                     int itemCount = mTranslatedItems.size();
                     mTranslatedItems.clear();
@@ -160,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
                     mAdapter.notifyParentItemRangeInserted(0, mTranslatedItems.size());
                     mTranslatedTextView.scrollToPosition(mTranslatedItems.size() - 1);
                 }
+                // Get single notifications from NotificationListener
                 else if (intent.getStringExtra("command").equals("notification")) {
                     String txt = intent.getStringExtra("notification");
                     TranslatedItem item = new TranslatedItem(context, "", txt, mTranslatedItems.size());

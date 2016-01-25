@@ -72,10 +72,6 @@
         "source": "C:\\Users\\Peter\\Documents\\Android_Apps\\Translator\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Peter\\Documents\\Android_Apps\\Translator\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_main.xml",
-        "source": "C:\\Users\\Peter\\Documents\\Android_Apps\\Translator\\app\\src\\main\\res\\layout\\content_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Peter\\Documents\\Android_Apps\\Translator\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Peter\\Documents\\Android_Apps\\Translator\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
