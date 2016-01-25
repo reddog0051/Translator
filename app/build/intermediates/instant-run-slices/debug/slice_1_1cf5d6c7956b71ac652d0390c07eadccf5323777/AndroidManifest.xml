@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="reddog0051.com.hangoutsspellchecker"
+      android:versionCode="1"
+      android:versionName="1.0"
+      split="lib_slice_1_1cf5d6c7956b71ac652d0390c07eadccf5323777">
+       <uses-sdk android:minSdkVersion="21"/>
+</manifest>
