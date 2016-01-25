@@ -3,24 +3,20 @@
     api-level="23"
     density="xxhdpi"
     format="1"
-    timestamp="1453749828711" >
+    timestamp="1453750609485" >
 
     <task
         name="javac"
-        duration="172" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="57" />
+        duration="0" />
     <task
         name="verifier"
-        duration="4" />
-
-    <artifact
-        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_5_8f732d97fb781d285f692f2eb5fb1834ebfb7347.apk"
-        type="SPLIT" />
+        duration="0" />
 
     <build timestamp="1453749289719" >
         <artifact
@@ -65,5 +61,6 @@
             location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_5_8f732d97fb781d285f692f2eb5fb1834ebfb7347.apk"
             type="SPLIT" />
     </build>
+    <build timestamp="1453750609485" />
 
 </instant-run>
