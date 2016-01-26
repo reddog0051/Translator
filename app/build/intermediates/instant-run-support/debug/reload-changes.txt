@@ -1,0 +1,5 @@
+CHANGED,C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\reddog0051\com\hangoutsspellchecker\MainActivity$NotificationReceiver$override.class
+CHANGED,C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\reddog0051\com\hangoutsspellchecker\MainActivity$override.class
+CHANGED,C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\reddog0051\com\hangoutsspellchecker\MainActivity$2$override.class
+CHANGED,C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\reddog0051\com\hangoutsspellchecker\MainActivity$3$override.class

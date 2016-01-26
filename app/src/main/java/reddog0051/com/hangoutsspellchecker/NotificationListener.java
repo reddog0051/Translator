@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -21,7 +20,6 @@ public class NotificationListener extends NotificationListenerService {
     @Override
     public void onCreate() {
         super.onCreate();
-        //Log.i(TAG, "onCreate");
         mServiceReceiver = new ServiceReceiver();
         registerReceiver(mServiceReceiver, new IntentFilter("MsgService"));
     }
@@ -34,7 +32,6 @@ public class NotificationListener extends NotificationListenerService {
 
     // Send all notifications
     private void sendNotificationList() {
-        //Log.i(TAG, "sendNotificationList");
         Intent i = new Intent("MsgClient");
         i.putExtra("command", "list");
         i.putStringArrayListExtra("list", mTexts);
@@ -43,7 +40,6 @@ public class NotificationListener extends NotificationListenerService {
 
     // Send the latest notification
     private void sendNotification(){
-        //Log.i(TAG, "sendNotification " + mTexts.get(mTexts.size() - 1));
         Intent i = new Intent("MsgClient");
         i.putExtra("command", "notification");
         i.putExtra("notification", mTexts.get(mTexts.size() - 1));
@@ -52,7 +48,6 @@ public class NotificationListener extends NotificationListenerService {
 
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
-        //Log.i(TAG, "onNotificationPosted");
         String pack = sbn.getPackageName();
         if (pack.equals(mPackageName) || pack.equals(getPackageName())) {
             //String ticker = sbn.getNotification().tickerText.toString();
@@ -83,12 +78,9 @@ public class NotificationListener extends NotificationListenerService {
     private class ServiceReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            //Log.i(TAG, "onReceive");
             if (intent != null) {
                 if (intent.getStringExtra("command").equals("list")) {
-                    if (!mTexts.isEmpty()) {
                         sendNotificationList();
-                    }
                 }
             }
         }

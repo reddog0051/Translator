@@ -19,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.bignerdranch.expandablerecyclerview.Model.ParentListItem;
 
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     private String TAG = "TRANSLATOR";
     private Context context = this;
-    private RecyclerView mTranslatedTextView;
+    private RecyclerView mTranslatedRecyclerView;
+    private TextView mEmptyView;
     private ExpandableTranslatorAdapter mAdapter;
     private NotificationReceiver mNotificationReceiver;
     private List<ParentListItem> mTranslatedItems = new ArrayList<>();
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
                 NotificationManager nManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -59,17 +62,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mTranslatedTextView = (RecyclerView) findViewById(R.id.translatedText);
-        mTranslatedTextView.setHasFixedSize(true);
-        mTranslatedTextView.setItemAnimator(new DefaultItemAnimator());
+        mTranslatedRecyclerView = (RecyclerView) findViewById(R.id.translatedText);
+        mTranslatedRecyclerView.setHasFixedSize(true);
+        mTranslatedRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setStackFromEnd(false);
         mLayoutManager.setReverseLayout(false);
-        mTranslatedTextView.setLayoutManager(mLayoutManager);
+        mTranslatedRecyclerView.setLayoutManager(mLayoutManager);
 
         mAdapter = new ExpandableTranslatorAdapter(context, mTranslatedItems);
-        mTranslatedTextView.setAdapter(mAdapter);
+        mTranslatedRecyclerView.setAdapter(mAdapter);
+
+        mEmptyView = (TextView) findViewById(R.id.empty_view);
 
         mNotificationReceiver = new NotificationReceiver();
         registerReceiver(mNotificationReceiver, new IntentFilter("MsgClient"));
@@ -138,6 +143,18 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void checkIsAdapterEmpty() {
+        if (mAdapter.getItemCount() == 0) {
+//                    Snackbar.make(findViewById(android.R.id.content), "No Hangouts messages yet", Snackbar.LENGTH_LONG)
+//                        .setAction("Dismiss", null).show();
+            mTranslatedRecyclerView.setVisibility(View.GONE);
+            mEmptyView.setVisibility(View.VISIBLE);
+        } else if (mTranslatedRecyclerView.getVisibility() == View.GONE) {
+            mTranslatedRecyclerView.setVisibility(View.VISIBLE);
+            mEmptyView.setVisibility(View.GONE);
+        }
+    }
+
     // Listen for notifications from NotificationListener
     private class NotificationReceiver extends BroadcastReceiver {
         @Override
@@ -157,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                         mTranslatedItems.add(item);
                     }
                     mAdapter.notifyParentItemRangeInserted(0, mTranslatedItems.size());
-                    mTranslatedTextView.scrollToPosition(mTranslatedItems.size() - 1);
+                    mTranslatedRecyclerView.scrollToPosition(mTranslatedItems.size() - 1);
                 }
                 // Get single notifications from NotificationListener
                 else if (intent.getStringExtra("command").equals("notification")) {
@@ -165,13 +182,14 @@ public class MainActivity extends AppCompatActivity {
                     TranslatedItem item = new TranslatedItem(context, "", txt, mTranslatedItems.size());
                     mTranslatedItems.add(item);
                     mAdapter.notifyParentItemInserted(mTranslatedItems.size() - 1);
-                    mTranslatedTextView.scrollToPosition(mTranslatedItems.size() - 1);
+                    mTranslatedRecyclerView.scrollToPosition(mTranslatedItems.size() - 1);
                 }
                 else if (intent.getStringExtra("command").equals("update")){
                     int index = intent.getIntExtra("position", 0);
                     mAdapter.notifyParentItemChanged(index);
                 }
             }
+            checkIsAdapterEmpty();
         }
     }
 }
