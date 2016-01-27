@@ -3,27 +3,26 @@
     api-level="23"
     density="xxhdpi"
     format="1"
-    timestamp="1453781466134"
-    verifier="PARENT_CLASS_CHANGED" >
+    timestamp="1453853707203" >
 
     <task
         name="javac"
-        duration="167" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="80" />
+        duration="0" />
     <task
         name="verifier"
-        duration="7" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_5_8f732d97fb781d285f692f2eb5fb1834ebfb7347.apk"
-        type="SPLIT" />
+        location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="1453780919512" >
+    <build timestamp="1453851154126" >
         <artifact
             location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\dependencies_2ed5d2c9a11958112761d1d841581f7fa09e05b1.apk"
             type="SPLIT" />
@@ -61,24 +60,10 @@
             location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1453781233367" >
+    <build timestamp="1453853707203" >
         <artifact
             location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="1453781338738"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_6_fd4ab7a158c7aa8dc08580a468c5b05f4ee237b8.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        timestamp="1453781466134"
-        verifier="PARENT_CLASS_CHANGED" >
-        <artifact
-            location="C:\Users\Peter\Documents\Android_Apps\Translator\app\build\intermediates\split-apk\debug\slice_5_8f732d97fb781d285f692f2eb5fb1834ebfb7347.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>
